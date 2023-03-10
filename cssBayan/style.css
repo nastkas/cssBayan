@@ -1,32 +1,29 @@
 body{
-    font-family:  Arial, sans-serif;
-    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
     font-weight: bold;
     line-height: 1.5;
     background-color: beige;
 }
 
-
 *,
 *::before,
 *::after{
     box-sizing: border-box;
-
 }
 
 p {
-    margin: 0 0 5px;
+    margin: 0 0 0.3125rem; /* 5px / 16px = 0.3125rem */
 }
 
-
 .bayan{
-    max-width: 500px;
-    margin: 20px auto;
+    max-width: 31.25rem; /* 500px / 16px = 31.25rem */
+    margin: 1.25rem auto; /* 20px / 16px = 1.25rem */
 }
 
 .bayan-title{
     display: block;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem; /* 10px / 16px = 0.625rem, 15px / 16px = 0.9375rem */
 
     cursor: pointer;
     color: blue;
@@ -38,11 +35,11 @@ p {
     content: '';
     display: block;
     border-style: solid;
-    border-width: 8px 5px 0 5px;
+    border-width: 0.5rem 0.3125rem 0 0.3125rem; /* 8px / 16px = 0.5rem, 5px / 16px = 0.3125rem */
     border-color: #111 transparent transparent transparent;
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 0.9375rem; /* 15px / 16px = 0.9375rem */
 
     transform: translateY(-50%);
 }
@@ -51,9 +48,10 @@ p {
     color: black;
 }
 .bayan-item{
-    margin-bottom: 5px;
-border: 1px solid red;
+    margin-bottom: 0.3125rem; /* 5px / 16px = 0.3125rem */
+    border: 0.0625rem solid red; /* 1px / 16px = 0.0625rem */
 }
+
 
 .bayan-input{
     width: 0;
@@ -62,33 +60,49 @@ border: 1px solid red;
     appearance: none;
 
     position: absolute;
-
-
 }
 
 
-.bayan-input:checked ~ .bayan-title{
+
+.bayan-input:hover ~ .bayan-title{
     background-color: rebeccapurple;
     display: block;
 }
 
-.bayan-input:checked ~ .bayan-title::after{
+.bayan-input:hover ~ .bayan-title::after{
     border-style: solid;
-border-width: 0 5px 8px 5px;
-border-color: transparent transparent #111 transparent;
+    border-width: 0 0.3125rem 0.5rem 0.3125rem; /* 8px / 16px = 0.5rem, 5px / 16px = 0.3125rem */
+    border-color: transparent transparent #111 transparent;
 
 }
-.bayan-input:checked ~ .bayan_picture{
+.bayan-input:hover ~ .bayan_picture{
     display: block;
 }
+
 .bayan_picture{
     display: none;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem; /* 10px / 16px = 0.625rem, 15px / 16px = 0.9375rem */
     transition: opacity 0.8s ease-in-out;
 }
+
+.bayan-input:checked ~ .bayan_picture {
+    display: block;
+  }
 
 img {
     display: block;
     margin: auto;
+    max-width: 100%;
+    height: auto;
 }
+
+
+  .bayan-title:hover ~ .bayan_picture img {
+    transform: scale(0.9);
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .bayan-picture img:hover {
+    transform: scale(0.9);
+  }
 
