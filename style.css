@@ -1,0 +1,58 @@
+body{
+    font-family:  Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: beige;
+}
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+.bayan{
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.bayan-title{
+    display: block;
+    padding: 10px 15px;
+
+    cursor: pointer;
+    color: black;
+
+    transition: background .2s ease-out;
+}
+
+.bayan-title:hover {
+    color: blue;
+}
+.bayan-item{
+    margin-bottom: 5px;
+border: 1px solid red;
+}
+
+.bayan-input{
+    width: 0;
+    height: 0;
+
+    appearance: none;
+
+    position: absolute;
+
+}
+
+.bayan-input:checked + .bayan_picture{
+    display: block;
+}
+.bayan_picture{
+    display: none;
+    padding: 10px 15px;
+}
